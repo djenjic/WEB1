@@ -1,0 +1,188 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .wrapper {
+    font-weight: bold;
+    display: grid;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .wrapper>* {
+    padding: 10px;
+  }
+  
+  .header {
+    background: #dc0000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: header;
+  }
+  
+  
+  .footer {
+    background: #777;
+    grid-area: footer;
+  }
+  
+  .front {
+    grid-area: front;
+    display:flex;
+    justify-content: center;
+  }
+
+  .front-image {
+    width: auto;
+    height: 400px;
+    left: 0px;
+    right: 0px;
+  }
+  
+  figure {
+    margin: 0;
+    position: relative
+  }
+  
+  .upper-left h3{
+    z-index: 100;
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    left: 0;
+    top: 0;
+    margin:30
+  }
+  
+  .aside-1 {
+    background: whitesmoke;
+    border-right: 1px solid gray;
+    grid-area: aside1;
+  }
+  
+  .aside-2 {
+    background: darkgray;
+    border-left: 1px solid gray;
+    grid-area: aside2;
+  }
+  
+  @media all and (max-width: 1024px) {
+    .wrapper {
+      grid-template-areas: 'header header header' 
+                           'front front front'
+                           'aside1 grid-container grid-container'
+                           'aside2 grid-container grid-container';
+    }
+
+    .header {
+        background: #dc0000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        grid-area: header;
+        flex-wrap: wrap;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 25px 50px;
+        background-color: #CCC;
+        padding: 10px;
+      }
+  }
+  
+  @media all and (min-width: 1024px) {
+    .wrapper {
+      grid-template-areas: 'header header header'
+                           'aside1 front front'
+                           'aside2 grid-container  grid-container'
+                           'aside2  grid-container  grid-container';
+    }
+
+    .header {
+        background: #dc0000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        grid-area: header;
+        flex-wrap:wrap;
+      }
+
+      .grid-container {
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 25px 50px;
+        padding: 10px;
+      }
+  }
+  
+  body {
+    padding: 2em;
+  }
+
+  .logo {
+    display: block;
+    width: 150px;
+    align-items: center;
+}
+
+ .icon{
+    display: block;
+    width: 50px;
+    align-items: center;
+ }
+
+ .cart-search{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ .grid-container {
+    display: grid;
+    grid-gap: 25px 50px;
+    background-color: #CCC;
+    padding: 10px;
+  }
+  
+  .grid-item {
+    display:flex;
+    flex-direction: column;
+    border: 1px solid black;
+    font-size: 2rem;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .grid-item img {
+    height: 150px ;
+    width: 150px ;
+  }
+
+  .imageBox {
+    position: relative;
+    float: left;
+  }
+  
+  .imageBox .hoverImg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+  }
+  
+  .imageBox:hover .hoverImg {
+    display: block;
+  }
+
+  .cart-number{
+    color: white;
+  }
+
+  .cart-container{
+    display:flex;
+    flex-direction: column;
+  }

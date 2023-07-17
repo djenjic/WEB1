@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="/styles/cart.css">
+  <script defer type="text/javascript" src="/scripts/script.js"></script>
+</head>
+
+<body>
+    <div class="wrapper" id="wrapper">
+        <header class="header">
+            <a href="/"><img src="images\logo.svg" class="logo" alt="Logo icon"></a>
+          <h1 id="trenutna">Košarica</h1>
+          <div class="cart-search">
+          <img src="images/search-icon.svg" alt="Search icon" class="icon">
+          <a href="/cart" class="link menu-item cart-menu">
+            <img src="images/cart-icon.svg" alt="Cart icon">
+            <div class="cart-menu-status">
+                <div id="cart-items"><%= totalItems %></div>
+                <div>items</div>
+            </div>
+            </a>
+            </div>
+           
+    
+        </header>
+            <div class="cart-header">
+                <div class="cart-header-title">Proizvod</div>
+                <div class="cart-header-title">Količina</div>
+            </div>
+
+                <% cart.forEach((item, index) => { %>
+                <div class="cart-item">
+                  <div class="cart-item-title"><%= item.name %></div>
+                  <div class="cart-item-actions">
+                    <button class="cart-item-decrease" onclick="removeFromCart('<%= item.name %>')">-</button>
+                    <input type="number" class="cart-item-quantity" id="<%= item.name %>" value="<%= item.quantity %>"></input>
+                    <button class="cart-item-increase" onclick="addToCart('<%= item.name %>')">+</button>
+                </div>
+                </div>
+                <% }); %>
+</body>

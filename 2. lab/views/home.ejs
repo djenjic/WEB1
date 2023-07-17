@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="/styles/main.css">
+  <script defer type="text/javascript" src="/scripts/script.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <a href="/"><img src="/images/logo.svg" class="logo" alt="Logo icon"></a>
+      <h1 id="trenutna"><%= categoryName %></h1>
+      <div class="cart-search">
+      <img src="/images/search-icon.svg" alt="Search icon" class="icon">
+      <a href="/cart" class="link menu-item cart-menu">
+        <img src="/images/cart-icon.svg" alt="Cart icon">
+        <div class="cart-menu-status">
+            <div id="cart-items"><%= totalItems %></div>
+            <div>items</div>
+        </div>
+        </a>
+        </div>
+       
+
+    </header>
+    <div class="front">
+        <figure>
+          <img class="front-image" src="/images/front-image.jpg" alt="Front image">
+          <div class="upper-left">
+            <h3>Dobrodošli u Mesnice Jenjić</h3>
+          </div>
+        </figure>
+    </div>
+
+    <div class="grid-container" id="proizvodi">
+      <% categoryItems.forEach((product, index) => { %>
+        <div class="grid-item" id="item-<%= index + 1 %>">
+          <div class="imageBox">
+            <div class="imageInn">
+              <img src="/images/<%= product.image %>" alt="<%= product.name %>">
+            </div>
+            <div class="hoverImg">
+              <button id="slika-carta" onclick="addToCart('<%= product.name %>')">
+                <img src="/images/cart-icon.svg" alt="Cart icon">
+              </button>
+              <p id="<%= product.name %>" class="cart-number">0</p>
+            </div>
+          </div>
+          <h6><%= product.name %></h6>
+        </div>
+      <% }); %>
+      
+    </div>
+
+    <aside class="aside aside-1">
+      <ul>
+        <% for (let i = 0; i < categories.length; i++) { %>
+          <li><button onclick="window.location.href = '/getProducts/' + <%= i %>"><%= categories[i] %></button></li>
+          <% } %>
+      </ul>
+
+
+    </aside>
+    <aside class="aside aside-2">
+      Kontakt<br>
+      Newsletter<br>
+      Pretplati se
+    </aside>
+  </div>
+
+</body>
+
+
+</html>

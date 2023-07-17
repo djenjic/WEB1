@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+  <script defer type="text/javascript" src="scripts/script.js"></script>
+  <script type="text/javascript" src="scripts/data.js"></script> 
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+        <a href="index.html"><img src="images\logo.svg" class="logo" alt="Logo icon"></a>
+      <h1 id="trenutna">Piletina</h1>
+      <div class="cart-search">
+      <img src="images/search-icon.svg" alt="Search icon" class="icon">
+      <a href="cart.html" class="link menu-item cart-menu">
+        <img src="images/cart-icon.svg" alt="Cart icon">
+        <div class="cart-menu-status">
+            <div id="cart-items">0</div>
+            <div>items</div>
+        </div>
+        </a>
+        </div>
+       
+
+    </header>
+    <div class="front">
+        <figure>
+          <img class="front-image" src="images/front-image.jpg" alt="Front image">
+          <div class="upper-left">
+            <h3>Dobrodošli u Mesnice Jenjić</h3>
+          </div>
+        </figure>
+    </div>
+
+    <div class="grid-container" id="proizvodi">
+      <div class="grid-item" id="item-1">
+        <div class="imageBox">
+          <div class="imageInn">
+            <img src="images/cekingrillpile.jpg" alt="Cekin Grill pile">
+          </div>
+          <div class="hoverImg">
+            <button id="slika-carta" onclick="dodajKosarici('Cekin Grill pile')"><img src="images/cart-icon.svg" alt="Cart icon"></button>
+            <p id="Cekin Grill pile" class="cart-number"></p>
+          </div>
+        </div>
+        <h6>Cekin Grill pile</h6>
+      </div>
+      <div class="grid-item" id="item-2">
+        <div class="imageBox">
+          <div class="imageInn">
+            <img src="images/cekinpripravakzajuhu.jpg" alt="Cekin Pripravak za juhu">
+          </div>
+          <div class="hoverImg">
+            <button id="slika-carta" onclick="dodajKosarici('Cekin Pripravak za juhu')"><img src="images/cart-icon.svg" alt="Cart icon"></button>
+            <p id="Cekin Pripravak za juhu" class="cart-number"></p>
+          </div>
+        </div>        
+        <h6>Cekin pripravak za juhu</h6>
+      </div>
+      <div class="grid-item" id="item-3">
+        <div class="imageBox">
+          <div class="imageInn">
+            <img src="images/cekinpilecaprsa.jpg" alt="Cekin Pileća prsa bez kože">
+          </div>
+          <div class="hoverImg">
+            <button id="slika-carta" onclick="dodajKosarici('Cekin Pileća prsa bez kože')"><img src="images/cart-icon.svg" alt="Cart icon"></button>
+            <p id="Cekin Pileća prsa bez kože" class="cart-number"></p>
+          </div>
+        </div>
+        <h6>Cekin Pileća prsa bez kože</h6>
+      </div>
+      <div class="grid-item" id="item-4">
+        <div class="imageBox">
+          <div class="imageInn">
+            <img src="images/cekinpilecirasjek.jpg" alt="Cekin Pileći rasjek premium">
+          </div>
+          <div class="hoverImg">
+            <button id="slika-carta" onclick="dodajKosarici('Cekin Pileći rasjek premium')"><img src="images/cart-icon.svg" alt="Cart icon"></button>
+            <p id="Cekin Pileći rasjek premium" class="cart-number"></p>
+          </div>
+        </div>
+        <h6>Cekin Pileći rasjek premium</h6>
+      </div>
+      <div class="grid-item" id="item-5">
+        <div class="imageBox">
+          <div class="imageInn">
+            <img src="images/cekinpilecajetra.jpg" alt="Cekin Pileća jetra sa srcem 500 g">
+          </div>
+          <div class="hoverImg">
+            <button id="slika-carta" onclick="dodajKosarici('Cekin Pileća jetra sa srcem 500 g')"><img src="images/cart-icon.svg" alt="Cart icon"></button>
+            <p id="Cekin Pileća jetra sa srcem 500 g" class="cart-number"></p>
+          </div>
+        </div>
+        <h6>Cekin Pileća jetra sa srcem 500 g</h6>
+      </div>
+    </div>
+
+    <aside class="aside aside-1">
+      <ul>
+        <li><button onclick="promijeniKategoriju(1)">Piletina</button></li>
+        <li><button onclick="promijeniKategoriju(2)">Puretina</button></li>
+        <li><button onclick="promijeniKategoriju(3)">Svinjetina</button></li>
+        <li><button onclick="promijeniKategoriju(4)">Junetina</button></li>
+        <li><button onclick="promijeniKategoriju(5)">Oslić</button></li>
+        <li><button onclick="promijeniKategoriju(6)">Lignja</button></li>
+        <li><button onclick="promijeniKategoriju(7)">Riblji štapići</button></li>
+        <li><button onclick="promijeniKategoriju(8)">Roštilj</button></li>
+        <li><button onclick="promijeniKategoriju(9)">Sirevi</button></li>
+        <li><button onclick="promijeniKategoriju(10)">Povrće</button></li>
+      </ul>
+
+
+    </aside>
+    <aside class="aside aside-2">
+      Kontakt<br>
+      Newsletter<br>
+      Pretplati se
+    </aside>
+  </div>
+
+</body>
+
+
+</html>

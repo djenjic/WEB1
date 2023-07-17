@@ -1,0 +1,244 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .wrapper {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .wrapper>* {
+    padding: 10px;
+  }
+  
+  .header {
+    background: #dc0000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: header;
+  }
+  
+  
+  .footer {
+    background: #777;
+    grid-area: footer;
+  }
+  
+  .front {
+    grid-area: front;
+    display:flex;
+    justify-content: center;
+  }
+
+  .front-image {
+    width: auto;
+    height: 400px;
+    left: 0px;
+    right: 0px;
+  }
+  
+  figure {
+    margin: 0;
+    position: relative
+  }
+  
+  .upper-left h3{
+    z-index: 100;
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    left: 0;
+    top: 0;
+    margin:30
+  }
+  
+  .aside-1 {
+    background: whitesmoke;
+    border-right: 1px solid gray;
+    grid-area: aside1;
+  }
+  
+  .aside-2 {
+    background: darkgray;
+    border-left: 1px solid gray;
+    grid-area: aside2;
+  }
+  
+  @media all and (max-width: 1024px) {
+    .wrapper {
+      grid-template-areas: 'header header header' 
+                           'cart-container cart-container cart-container'
+                           'cart-container cart-container cart-container'
+                           'cart-container cart-container cart-container';
+    }
+
+    .header {
+        background: #dc0000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        grid-area: header;
+        flex-wrap: wrap;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 25px 50px;
+        background-color: #CCC;
+        padding: 10px;
+      }
+  }
+  
+  @media all and (min-width: 1024px) {
+    .wrapper {
+      grid-template-areas: 'header header header' 
+      'proizvodi . kolicina'
+      'proizvodi . kolicina'
+      'proizvodi . kolicina';
+    }
+
+    .header {
+        background: #dc0000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        grid-area: header;
+        flex-wrap:wrap;
+      }
+
+      .grid-container {
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 25px 50px;
+        padding: 10px;
+      }
+  }
+  
+  body {
+    padding: 2em;
+  }
+
+  .logo {
+    display: block;
+    width: 150px;
+    align-items: center;
+}
+
+ .icon{
+    display: block;
+    width: 50px;
+    align-items: center;
+ }
+
+ .cart-search{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ .grid-container {
+    display: grid;
+    grid-gap: 25px 50px;
+    background-color: #CCC;
+    padding: 10px;
+  }
+  
+  .grid-item {
+    display:flex;
+    flex-direction: column;
+    border: 1px solid black;
+    font-size: 2rem;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .grid-item img {
+    height: 150px ;
+    width: 150px ;
+  }
+
+  .imageBox {
+    position: relative;
+    float: left;
+  }
+  
+  .imageBox .hoverImg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+  }
+  
+  .imageBox:hover .hoverImg {
+    display: block;
+  }
+
+  .cart-number{
+    color: white;
+  }
+
+  .proizvodi{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-area: proizvodi;
+  }
+
+  .proizvodi div{
+    border-bottom: 1px solid black;
+  }
+
+  .kolicina{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-area: kolicina;
+  }
+
+  .cart-header{
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    border: 3px solid black;
+    padding: 10px;
+  }
+
+  .cart {
+    text-align: center;
+    max-width: 300px;
+    height: 400px; }
+    .cart-item, .cart-header {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    .cart-item-title, .cart-header-title {
+      flex: 1;
+      align-items: center;
+      justify-content: space-evenly;
+      color: black; }
+    .cart-item-quantity {
+      flex: 1;
+      max-width: 30px;
+      text-align: center; }
+    .cart-header {
+      border-bottom: 1px solid black;
+      color: black;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-align: center; }
+    .cart-item-price {
+      flex: 1; }
+    .cart-item-total-price {
+      flex: 1;
+      text-align: right; }
